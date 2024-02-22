@@ -13,15 +13,8 @@ def home():
     print("Tables not loaded")
     df_ingredient, df_keyword = load_table.load_table()
     print("Tables loaded")
-    # return df_ingredient, df_keyword
-    # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
-    # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
-    # print(json.dumps(df_ingredient[1]))
-    # print(jsonify(df_ingredient[1]))
-    # print(jsonify(df_ingredient))
-    print("jsonified")
-    return json.dumps(df_ingredient)
-    
+    # return json.dumps(df_ingredient)
+    return json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword))
     
 # 4. Define what to do when a user hits the /about route
 # @app.route("/about")
