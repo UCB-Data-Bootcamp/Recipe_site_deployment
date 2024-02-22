@@ -2,7 +2,7 @@ def top_ingredients(df_ingredient, df_keyword):
 
     import pandas as pd
     from pathlib import Path
-    import hvplot.pandas
+    # import hvplot.pandas
     from sklearn.cluster import KMeans
     from sklearn.ensemble import RandomForestClassifier
     from sklearn.preprocessing import StandardScaler
@@ -105,7 +105,7 @@ def top_ingredients(df_ingredient, df_keyword):
     #Worst ingredients you can use given the website input
     best_ingredients[best_ingredients['frequency']>1].tail(10)
 
-    return best_ingredients[best_ingredients['frequency']>10][:10].to_dict(), best_ingredients[best_ingredients['frequency']>10][:10].to_dict()
+    return best_ingredients[best_ingredients['frequency']>10]['ingredient'].index[:5].to_list()
 
 
 
