@@ -1,15 +1,17 @@
+import pandas as pd
+from pathlib import Path
+# import hvplot.pandas
+from sklearn.cluster import KMeans
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
+from sklearn.decomposition import PCA
+from sklearn.linear_model import LinearRegression
+
 def top_ingredients(df_ingredient, df_keyword):
 
-    import pandas as pd
-    from pathlib import Path
-    # import hvplot.pandas
-    from sklearn.cluster import KMeans
-    from sklearn.ensemble import RandomForestClassifier
-    from sklearn.preprocessing import StandardScaler
-    from sklearn.model_selection import train_test_split
-    from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
-    from sklearn.decomposition import PCA
-    from sklearn.linear_model import LinearRegression
+
 
     print('a')
 

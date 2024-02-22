@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 import json
 import load_table, ML_analysis_based_on_web_input
+import pandas as pd
 
 
 # 2. Create an app, being sure to pass __name__
@@ -14,7 +15,8 @@ def home():
     # return df_ingredient, df_keyword
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
-    print(json.dumps(df_ingredient[1]))
+    # print(json.dumps(df_ingredient[1]))
+    print(14)
     return json.dumps(13)
     
     
