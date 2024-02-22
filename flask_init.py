@@ -10,6 +10,7 @@ app = Flask(__name__)
 # 3. Define what to do when a user hits the index route
 @app.route("/")
 def home():
+    print("Tables not loaded")
     df_ingredient, df_keyword = load_table.load_table()
     print("Tables loaded")
     # return df_ingredient, df_keyword
@@ -17,7 +18,7 @@ def home():
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
     # print(json.dumps(df_ingredient[1]))
     # print(jsonify(df_ingredient[1]))
-    print(15)
+    print("15")
     return json.dumps(13)
     
     
