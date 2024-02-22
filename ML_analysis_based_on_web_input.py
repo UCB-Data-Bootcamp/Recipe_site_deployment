@@ -12,8 +12,8 @@ from sklearn.linear_model import LinearRegression
 def top_ingredients(df_ingredient, df_keyword):
     print('a')
 
-    df_ingredient = pd.DataFrame(df_ingredient)
-    df_keyword = pd.DataFrame(df_keyword)
+    # df_ingredient = pd.DataFrame(df_ingredient)
+    # df_keyword = pd.DataFrame(df_keyword)
     print('b')
     ##USER INPUT
     recipe_type=['low protein']
@@ -106,7 +106,7 @@ def top_ingredients(df_ingredient, df_keyword):
     # #Worst ingredients you can use given the website input
     # best_ingredients[best_ingredients['frequency']>1].tail(10)
 
-    return best_ingredients[best_ingredients['frequency']>10]['ingredient'].index[:5].to_list()
+    return best_ingredients[best_ingredients['frequency']>10]['ingredient'].index[:5] #.to_list()
 
 
 
