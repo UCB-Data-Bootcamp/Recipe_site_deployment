@@ -11,9 +11,11 @@ def top_ingredients(df_ingredient, df_keyword):
     from sklearn.decomposition import PCA
     from sklearn.linear_model import LinearRegression
 
+    print('a')
+
     df_ingredient = pd.DataFrame(df_ingredient)
     df_keyword = pd.DataFrame(df_keyword)
-
+    print('b')
     ##USER INPUT
     recipe_type=['low protein']
     cook_time=['< 4 Hours']
@@ -26,10 +28,10 @@ def top_ingredients(df_ingredient, df_keyword):
         'Country':list(map(str.lower,Region))}
         # 'Ingredients':list(map(str.lower,ingredient_list))}
 
-
+    print('c')
     df_combined_keyword=df_keyword.copy()
     df_combined_ingredient=df_ingredient.copy()
-
+    print('d')
 
     ##DATA CLEANUP
     #Filter based on input_selection
@@ -47,7 +49,7 @@ def top_ingredients(df_ingredient, df_keyword):
     df_combined = df_combined.drop(columns=drop_cols[drop_cols].index,axis=1) #drop all columns that have 0s 
     df_combined.dropna(subset=['AggregatedRating'], inplace=True)
     df_combined.shape
-
+    print('e')
 
     ##ML
 
@@ -69,7 +71,7 @@ def top_ingredients(df_ingredient, df_keyword):
 
     #boxplot x-axis
     df_ingredients_predicted['AggregatedRating'].value_counts().index.sort_values()
-
+    print('f')
 
     # #Prepping data for boxplot below
     # from numpy import random
@@ -100,10 +102,10 @@ def top_ingredients(df_ingredient, df_keyword):
     best_ingredients = pd.DataFrame({'ingredient': X.columns, 'impact':model.coef_, 'frequency':X.sum()})
     # best_ingredients = best_ingredients.drop(index=best_ingredients[(best_ingredients['impact']>1e3)|(best_ingredients['impact']<-1e3)].index).sort_values(by='impact', ascending=False)
     best_ingredients = best_ingredients.sort_values(by='impact', ascending=False)
-    best_ingredients[best_ingredients['frequency']>1].head(10)
-
-    #Worst ingredients you can use given the website input
-    best_ingredients[best_ingredients['frequency']>1].tail(10)
+    # best_ingredients[best_ingredients['frequency']>1].head(10)
+    print('g')
+    # #Worst ingredients you can use given the website input
+    # best_ingredients[best_ingredients['frequency']>1].tail(10)
 
     return best_ingredients[best_ingredients['frequency']>10]['ingredient'].index[:5].to_list()
 
