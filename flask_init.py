@@ -16,7 +16,7 @@ def home():
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
     # print(json.dumps(df_ingredient[1]))
-    print(json.dumps(15))
+    print(json.dumps(df_ingredient[1]))
     return json.dumps(13)
     
     
