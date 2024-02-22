@@ -10,9 +10,6 @@ from sklearn.decomposition import PCA
 from sklearn.linear_model import LinearRegression
 
 def top_ingredients(df_ingredient, df_keyword):
-
-
-
     print('a')
 
     df_ingredient = pd.DataFrame(df_ingredient)
