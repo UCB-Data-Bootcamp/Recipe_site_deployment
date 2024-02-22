@@ -13,8 +13,8 @@ def home():
     print("Tables loaded")
     # return df_ingredient, df_keyword
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
-    print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
-    return json.dumps(2)
+    # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
+    return json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword))
     
     
 # 4. Define what to do when a user hits the /about route
