@@ -14,7 +14,9 @@ def home():
     df_ingredient, df_keyword = load_table.load_table()
     print("Tables loaded")
     # return json.dumps(df_ingredient)
-    return json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword))
+    ingredient_list = ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)
+    print("list created")
+    return json.dumps(13)
     
 # 4. Define what to do when a user hits the /about route
 # @app.route("/about")
