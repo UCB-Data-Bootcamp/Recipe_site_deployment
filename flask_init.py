@@ -27,6 +27,6 @@ def home():
 #     return ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)
 
 
-if __name__ == "__main__":
-    # app.run(host='127.0.0.1', port=5000, debug=True)
-    app.run(host="0.0.0.0", port=8080)
+# if __name__ == "__main__":
+#     # app.run(host='127.0.0.1', port=5000, debug=True)
+#     app.run(host="0.0.0.0", port=8080)
