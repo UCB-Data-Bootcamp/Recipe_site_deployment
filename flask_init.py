@@ -9,12 +9,12 @@ app = Flask(__name__)
 # 3. Define what to do when a user hits the index route
 @app.route("/")
 def home():
-    # df_ingredient, df_keyword = load_table.load_table()
+    df_ingredient, df_keyword = load_table.load_table()
     print("Tables loaded")
     # return df_ingredient, df_keyword
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
-    # return json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword))
-    return json.dumps(1)
+    return json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword))
+    
     
 # 4. Define what to do when a user hits the /about route
 # @app.route("/about")
