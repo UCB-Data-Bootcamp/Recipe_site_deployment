@@ -16,7 +16,7 @@ def home():
     # return json.dumps(df_ingredient)
     ingredient_list = ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)
     print("list created")
-    return json.dumps(13)
+    return json.dumps(ingredient_list)
     
 # 4. Define what to do when a user hits the /about route
 # @app.route("/about")
