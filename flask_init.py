@@ -16,7 +16,7 @@ def home():
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
     # print(json.dumps(ML_analysis_based_on_web_input.top_ingredients(df_ingredient, df_keyword)))
     # print(json.dumps(df_ingredient[1]))
-    print(14)
+    # print(json.dumps(15))
     return json.dumps(13)
     
     
@@ -29,4 +29,4 @@ def home():
 
 if __name__ == "__main__":
     # app.run(host='127.0.0.1', port=5000, debug=True)
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host="0.0.0.0", port=8080)
